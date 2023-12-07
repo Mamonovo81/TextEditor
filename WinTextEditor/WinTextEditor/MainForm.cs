@@ -29,5 +29,10 @@ namespace WinTextEditor
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void ButtonCloseClick(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }

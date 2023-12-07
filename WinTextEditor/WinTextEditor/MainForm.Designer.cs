@@ -38,10 +38,10 @@ namespace WinTextEditor
 		{
 			this.textOutput = new System.Windows.Forms.TextBox();
 			this.panelControl = new System.Windows.Forms.Panel();
-			this.panelClose = new System.Windows.Forms.Panel();
-			this.buttonOpen = new System.Windows.Forms.Button();
-			this.buttonSave = new System.Windows.Forms.Button();
 			this.buttonSaveAs = new System.Windows.Forms.Button();
+			this.buttonSave = new System.Windows.Forms.Button();
+			this.buttonOpen = new System.Windows.Forms.Button();
+			this.panelClose = new System.Windows.Forms.Panel();
 			this.buttonClose = new System.Windows.Forms.Button();
 			this.panelControl.SuspendLayout();
 			this.panelClose.SuspendLayout();
@@ -66,24 +66,15 @@ namespace WinTextEditor
 			this.panelControl.Size = new System.Drawing.Size(423, 74);
 			this.panelControl.TabIndex = 1;
 			// 
-			// panelClose
+			// buttonSaveAs
 			// 
-			this.panelClose.Controls.Add(this.buttonClose);
-			this.panelClose.Location = new System.Drawing.Point(442, 291);
-			this.panelClose.Name = "panelClose";
-			this.panelClose.Size = new System.Drawing.Size(123, 73);
-			this.panelClose.TabIndex = 2;
-			// 
-			// buttonOpen
-			// 
-			this.buttonOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonOpen.ForeColor = System.Drawing.Color.Crimson;
-			this.buttonOpen.Location = new System.Drawing.Point(22, 14);
-			this.buttonOpen.Name = "buttonOpen";
-			this.buttonOpen.Size = new System.Drawing.Size(108, 48);
-			this.buttonOpen.TabIndex = 0;
-			this.buttonOpen.Text = "Открыть";
-			this.buttonOpen.UseVisualStyleBackColor = true;
+			this.buttonSaveAs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonSaveAs.Location = new System.Drawing.Point(265, 14);
+			this.buttonSaveAs.Name = "buttonSaveAs";
+			this.buttonSaveAs.Size = new System.Drawing.Size(140, 46);
+			this.buttonSaveAs.TabIndex = 2;
+			this.buttonSaveAs.Text = "Сохранить как";
+			this.buttonSaveAs.UseVisualStyleBackColor = true;
 			// 
 			// buttonSave
 			// 
@@ -96,15 +87,24 @@ namespace WinTextEditor
 			this.buttonSave.Text = "Сохранить";
 			this.buttonSave.UseVisualStyleBackColor = true;
 			// 
-			// buttonSaveAs
+			// buttonOpen
 			// 
-			this.buttonSaveAs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonSaveAs.Location = new System.Drawing.Point(265, 14);
-			this.buttonSaveAs.Name = "buttonSaveAs";
-			this.buttonSaveAs.Size = new System.Drawing.Size(140, 46);
-			this.buttonSaveAs.TabIndex = 2;
-			this.buttonSaveAs.Text = "Сохранить как";
-			this.buttonSaveAs.UseVisualStyleBackColor = true;
+			this.buttonOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonOpen.ForeColor = System.Drawing.Color.Crimson;
+			this.buttonOpen.Location = new System.Drawing.Point(22, 14);
+			this.buttonOpen.Name = "buttonOpen";
+			this.buttonOpen.Size = new System.Drawing.Size(108, 48);
+			this.buttonOpen.TabIndex = 0;
+			this.buttonOpen.Text = "Открыть";
+			this.buttonOpen.UseVisualStyleBackColor = true;
+			// 
+			// panelClose
+			// 
+			this.panelClose.Controls.Add(this.buttonClose);
+			this.panelClose.Location = new System.Drawing.Point(442, 291);
+			this.panelClose.Name = "panelClose";
+			this.panelClose.Size = new System.Drawing.Size(123, 73);
+			this.panelClose.TabIndex = 2;
 			// 
 			// buttonClose
 			// 
@@ -116,6 +116,7 @@ namespace WinTextEditor
 			this.buttonClose.TabIndex = 0;
 			this.buttonClose.Text = "Закрыть";
 			this.buttonClose.UseVisualStyleBackColor = true;
+			this.buttonClose.Click += new System.EventHandler(this.ButtonCloseClick);
 			// 
 			// MainForm
 			// 
