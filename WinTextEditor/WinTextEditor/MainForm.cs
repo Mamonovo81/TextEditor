@@ -19,6 +19,9 @@ namespace WinTextEditor
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		
+		string FileName { get; set;}
+		
 		public MainForm()
 		{
 			//
@@ -39,11 +42,18 @@ namespace WinTextEditor
 		{
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
-				string filename = openFileDialog.FileName;
+				FileName = openFileDialog.FileName;
 				//MessageBox.Show(filename);
-				string txt = File.ReadAllText(filename);
+				string txt = File.ReadAllText(FileName);
 				textOutput.Text = txt;
+				this.Text = FileName;
+				
 			}
+		}
+		
+		void ButtonSaveClick(object sender, EventArgs e)
+		{
+			File.WriteAllText(FileName, textOutput.Text);
 		}
 	}
 

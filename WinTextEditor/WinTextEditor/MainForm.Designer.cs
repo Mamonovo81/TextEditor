@@ -87,6 +87,7 @@ namespace WinTextEditor
 			this.buttonSave.TabIndex = 1;
 			this.buttonSave.Text = "Сохранить";
 			this.buttonSave.UseVisualStyleBackColor = true;
+			this.buttonSave.Click += new System.EventHandler(this.ButtonSaveClick);
 			// 
 			// buttonOpen
 			// 
