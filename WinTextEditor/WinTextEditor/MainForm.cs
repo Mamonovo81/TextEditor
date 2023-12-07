@@ -55,6 +55,15 @@ namespace WinTextEditor
 		{
 			File.WriteAllText(FileName, textOutput.Text);
 		}
+		
+		void ButtonSaveAsClick(object sender, EventArgs e)
+		{
+			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				string fileNameToSave = saveFileDialog.FileName;
+				File.WriteAllText(fileNameToSave, textOutput.Text);
+			}
+		}
 	}
 
 }

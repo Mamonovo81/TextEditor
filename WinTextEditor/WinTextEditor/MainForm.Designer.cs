@@ -44,6 +44,7 @@ namespace WinTextEditor
 			this.panelClose = new System.Windows.Forms.Panel();
 			this.buttonClose = new System.Windows.Forms.Button();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
 			this.panelControl.SuspendLayout();
 			this.panelClose.SuspendLayout();
 			this.SuspendLayout();
@@ -76,6 +77,7 @@ namespace WinTextEditor
 			this.buttonSaveAs.TabIndex = 2;
 			this.buttonSaveAs.Text = "Сохранить как";
 			this.buttonSaveAs.UseVisualStyleBackColor = true;
+			this.buttonSaveAs.Click += new System.EventHandler(this.ButtonSaveAsClick);
 			// 
 			// buttonSave
 			// 
@@ -127,6 +129,11 @@ namespace WinTextEditor
 			this.openFileDialog.Filter = "TXT files|*.txt";
 			this.openFileDialog.Title = "Открыть файл";
 			// 
+			// saveFileDialog
+			// 
+			this.saveFileDialog.Filter = "TXT files|*.txt";
+			this.saveFileDialog.Title = "Сохранить как";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +149,7 @@ namespace WinTextEditor
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.SaveFileDialog saveFileDialog;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.Button buttonClose;
 		private System.Windows.Forms.Panel panelClose;
