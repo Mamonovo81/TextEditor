@@ -43,6 +43,7 @@ namespace WinTextEditor
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
 				FileName = openFileDialog.FileName;
+				buttonSave.Enabled = true;
 				//MessageBox.Show(filename);
 				string txt = File.ReadAllText(FileName);
 				textOutput.Text = txt;

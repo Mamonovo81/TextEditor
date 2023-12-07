@@ -81,6 +81,7 @@ namespace WinTextEditor
 			// 
 			// buttonSave
 			// 
+			this.buttonSave.Enabled = false;
 			this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonSave.ForeColor = System.Drawing.Color.CornflowerBlue;
 			this.buttonSave.Location = new System.Drawing.Point(136, 14);
