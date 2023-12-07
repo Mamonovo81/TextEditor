@@ -43,6 +43,7 @@ namespace WinTextEditor
 			this.buttonOpen = new System.Windows.Forms.Button();
 			this.panelClose = new System.Windows.Forms.Panel();
 			this.buttonClose = new System.Windows.Forms.Button();
+			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.panelControl.SuspendLayout();
 			this.panelClose.SuspendLayout();
 			this.SuspendLayout();
@@ -97,6 +98,7 @@ namespace WinTextEditor
 			this.buttonOpen.TabIndex = 0;
 			this.buttonOpen.Text = "Открыть";
 			this.buttonOpen.UseVisualStyleBackColor = true;
+			this.buttonOpen.Click += new System.EventHandler(this.ButtonOpenClick);
 			// 
 			// panelClose
 			// 
@@ -118,6 +120,12 @@ namespace WinTextEditor
 			this.buttonClose.UseVisualStyleBackColor = true;
 			this.buttonClose.Click += new System.EventHandler(this.ButtonCloseClick);
 			// 
+			// openFileDialog
+			// 
+			this.openFileDialog.FileName = "openFileDialog1";
+			this.openFileDialog.Filter = "TXT files|*.txt";
+			this.openFileDialog.Title = "Открыть файл";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,6 +141,7 @@ namespace WinTextEditor
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.Button buttonClose;
 		private System.Windows.Forms.Panel panelClose;
 		private System.Windows.Forms.Button buttonOpen;

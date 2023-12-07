@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WinTextEditor
 {
@@ -29,10 +30,21 @@ namespace WinTextEditor
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
 		void ButtonCloseClick(object sender, EventArgs e)
 		{
 			Close();
 		}
+		
+		void ButtonOpenClick(object sender, EventArgs e)
+		{
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				string filename = openFileDialog.FileName;
+				//MessageBox.Show(filename);
+				string txt = File.ReadAllText(filename);
+				textOutput.Text = txt;
+			}
+		}
 	}
+
 }
